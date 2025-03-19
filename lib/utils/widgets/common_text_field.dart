@@ -7,44 +7,48 @@ class CommonTextField extends StatelessWidget {
       required this.labelText,
       required this.hintText,
       required this.controller,
-      this.onTap});
+      this.onTap,
+      this.maxLines});
 
   final TextEditingController controller;
   final String labelText;
   final String hintText;
   final Function()? onTap;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      cursorColor: AppColor.textColorLight,
+      cursorColor: AppColor.textColorDark,
       readOnly: onTap == null ? false : true,
+      maxLines: maxLines,
       style: const TextStyle(
-        color: AppColor.textColorLight,
+        color: AppColor.textColorDark,
       ),
       onTap: onTap,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: const TextStyle(
-          color: AppColor.textColorLight,
+          color: AppColor.textColorDark,
         ),
         labelText: labelText,
         labelStyle: const TextStyle(
-          color: AppColor.textColorLight,
+          color: AppColor.textColorDark,
         ),
         floatingLabelBehavior: FloatingLabelBehavior.never,
+        alignLabelWithHint: true,
         focusColor: AppColor.textColorLight,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: const BorderSide(
-            color: AppColor.textColorLight,
+            color: AppColor.textColorDark,
           ),
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: const BorderSide(
-            color: AppColor.textColorLight,
+            color: AppColor.textColorDark,
           ),
         ),
       ),
