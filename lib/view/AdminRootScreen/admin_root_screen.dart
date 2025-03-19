@@ -3,6 +3,7 @@ import 'package:mediplus/utils/assets/app_colors.dart';
 import 'package:mediplus/view/AdminRootScreen/CustomerScreen/customer_screen.dart';
 import 'package:mediplus/view/AdminRootScreen/DashBoardScreen/dash_board_screen.dart';
 import 'package:mediplus/view/AdminRootScreen/ManageProductScreen/manage_product_screen.dart';
+import 'package:mediplus/view/AdminRootScreen/OrdersScreen/order_screen.dart';
 import 'package:mediplus/view/AdminRootScreen/UsersScreen/users_screen.dart';
 import 'package:mediplus/view/AdminRootScreen/drawer_screen.dart';
 import 'package:mediplus/viewModel/AdminRoleProvider/admin_role_screen_route_provider.dart';
@@ -41,9 +42,7 @@ class AdminRootScreen extends StatelessWidget {
         UsersScreen(),
         CustomerScreen(),
         ManageProductScreen(),
-        Container(
-          color: Colors.blueAccent,
-        ),
+        OrderScreen(),
         Container(
           color: Colors.red,
         ),

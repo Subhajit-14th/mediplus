@@ -7,12 +7,14 @@ class CommonTextField extends StatelessWidget {
       required this.labelText,
       required this.hintText,
       required this.controller,
-      this.onTap});
+      this.onTap,
+      this.maxLines});
 
   final TextEditingController controller;
   final String labelText;
   final String hintText;
   final Function()? onTap;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,7 @@ class CommonTextField extends StatelessWidget {
       controller: controller,
       cursorColor: AppColor.textColorDark,
       readOnly: onTap == null ? false : true,
+      maxLines: maxLines,
       style: const TextStyle(
         color: AppColor.textColorDark,
       ),
@@ -34,6 +37,7 @@ class CommonTextField extends StatelessWidget {
           color: AppColor.textColorDark,
         ),
         floatingLabelBehavior: FloatingLabelBehavior.never,
+        alignLabelWithHint: true,
         focusColor: AppColor.textColorLight,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
