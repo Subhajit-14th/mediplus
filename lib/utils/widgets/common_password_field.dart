@@ -29,11 +29,11 @@ class _CommonPasswordFieldState extends State<CommonPasswordField> {
       decoration: InputDecoration(
         hintText: widget.hintText,
         hintStyle: const TextStyle(
-          color: AppColor.textColorLight,
+          color: AppColor.textColorDark,
         ),
         labelText: widget.labelText,
         labelStyle: const TextStyle(
-          color: AppColor.textColorLight,
+          color: AppColor.textColorDark,
         ),
         focusColor: AppColor.textColorLight,
         focusedBorder: OutlineInputBorder(
@@ -56,7 +56,7 @@ class _CommonPasswordFieldState extends State<CommonPasswordField> {
           },
           icon: Icon(
             isNotShow ? Icons.visibility_rounded : Icons.visibility_off_rounded,
-            color: AppColor.textColorLight,
+            color: AppColor.textColorDark,
           ),
         ),
       ),
