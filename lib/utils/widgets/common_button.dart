@@ -10,6 +10,7 @@ class CommonButton extends StatelessWidget {
     this.height,
     this.onTap,
     required this.buttonColor,
+    this.buttonTxtColor,
   });
 
   final double width;
@@ -17,6 +18,7 @@ class CommonButton extends StatelessWidget {
   final String buttonText;
   final Function()? onTap;
   final Color buttonColor;
+  final Color? buttonTxtColor;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class CommonButton extends StatelessWidget {
           child: Text(
             buttonText,
             style: TextStyle(
-              color: AppColor.textColorLight,
+              color: buttonTxtColor ?? AppColor.textColorLight,
               fontSize: 18,
               fontWeight: FontWeight.w500,
               fontFamily: 'Lato',

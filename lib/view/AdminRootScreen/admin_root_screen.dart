@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mediplus/utils/assets/app_colors.dart';
+import 'package:mediplus/view/AdminRootScreen/CustomerScreen/customer_screen.dart';
 import 'package:mediplus/view/AdminRootScreen/DashBoardScreen/dash_board_screen.dart';
+import 'package:mediplus/view/AdminRootScreen/ManageProductScreen/manage_product_screen.dart';
+import 'package:mediplus/view/AdminRootScreen/OrdersScreen/order_screen.dart';
+import 'package:mediplus/view/AdminRootScreen/UsersScreen/users_screen.dart';
 import 'package:mediplus/view/AdminRootScreen/drawer_screen.dart';
 import 'package:mediplus/viewModel/AdminRoleProvider/admin_role_screen_route_provider.dart';
 import 'package:provider/provider.dart';
@@ -35,19 +39,14 @@ class AdminRootScreen extends StatelessWidget {
       drawer: const DrawerScreen(),
       body: [
         DashBoardScreen(),
-        Container(
-          color: Colors.amber,
-        ),
-        Container(
-          color: Colors.green,
-        ),
-        Container(
-          color: Colors.blueAccent,
-        ),
+        UsersScreen(),
+        CustomerScreen(),
+        ManageProductScreen(),
+        OrderScreen(),
         Container(
           color: Colors.red,
         ),
-      ][context.read<AdminRoleScreenRouteProvider>().screenRouteIndex],
+      ][context.watch<AdminRoleScreenRouteProvider>().screenRouteIndex],
     );
   }
 }

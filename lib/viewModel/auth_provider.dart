@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AuthProvider extends ChangeNotifier {
-  TextEditingController _emailController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   TextEditingController get emailController => _emailController;
 
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   TextEditingController get passwordController => _passwordController;
 
-  bool _isAuthenticate = false;
+  final bool _isAuthenticate = false;
   bool get isAuthenticate => _isAuthenticate;
 
   String _role = "";
